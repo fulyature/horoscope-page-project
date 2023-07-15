@@ -1,0 +1,36 @@
+@import "../../scss/variable.scss";
+.card-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    gap:2rem;
+    
+    .cards{
+        width: 500px;
+        height: 350px;
+        position: relative;
+    }
+    .title{
+        // kartları akıştan çıkart.cards da position:relative ver ki akışı bozsun 
+        position: absolute;
+        top:0;
+        left:0;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        color:$cardNavBgColor;
+        border-radius: 10px 20px 20px 20px;
+
+    }
+    .date{
+        //akıştan cikarıldı
+        position: absolute;
+        // top ve left sol üst köşeye göre ortalama yaptığı için transform translate ile merkezi ortaya çek
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color:rgba($color: #000000, $alpha: 0.8);
+        color:$cardNavBgColor;
+        padding: 1rem;
+        font-size: 0.5rem;
+        z-index: 2;
+    }
+}
