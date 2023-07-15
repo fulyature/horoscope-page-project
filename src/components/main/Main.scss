@@ -9,6 +9,15 @@
         width: 500px;
         height: 350px;
         position: relative;
+        //card-over hidden yapıldı ki,y ekseninde görünmeyecek şekilde kaydırdık.. üzerine gelince görünecek şekilde ayarlandı
+        overflow: hidden;
+        &:hover .card-over{
+            transform: translateZ(0);
+
+        }
+        &:hover img{
+            opacity: 1;
+        }
     }
     .title{
         // kartları akıştan çıkart.cards da position:relative ver ki akışı bozsun 
@@ -17,8 +26,8 @@
         left:0;
         background-color: rgba($color: #000000, $alpha: 0.8);
         color:$cardNavBgColor;
-        border-radius: 10px 20px 20px 20px;
-
+        border-radius: 10px 20px 10px 20px;
+       z-index:2
     }
     .date{
         //akıştan cikarıldı
@@ -27,10 +36,40 @@
         top:50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        background-color:rgba($color: #000000, $alpha: 0.8);
+        background-color:rgba(0,0,0,0.8);
         color:$cardNavBgColor;
         padding: 1rem;
         font-size: 0.5rem;
+        border-radius: 10px;
         z-index: 2;
+    }
+    img{
+        width: 500px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+        opacity: 0.5;
+    }
+    .card-over{
+        width: 500px;
+      
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color:rgba(0,0,0,0.8);
+        font-size: 1.5rem;
+    
+        z-index:3;
+        padding: 1rem;
+        // y ekseninde tamamını kaydır.
+        transform: translateY(100%);
+        transition: transform 0.8s;
+        max-height: 75%;
+        overflow: scroll;
+        //scroll kötü göründüğü için none yapıyorum
+        &::-webkit-scrollbar{
+            display: none;
+        }
+  
     }
 }
