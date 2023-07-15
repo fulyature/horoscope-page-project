@@ -1,7 +1,38 @@
 @import "../../scss/variable.scss";
 .navbar{
-    
+    background-color: $cardNavBgColor; 
+    display: flex;
+    justify-content: space-between;
+    padding:1rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index:3;
+
+    .links{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        gap:2%;
+
+    }
+
+    a{
+        color:$secondaryColor;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        border-radius: 5px;
+        transition: all 0.6s;
+        &:hover{
+            background-color: $secondaryColor;
+            color:$cardNavBgColor
+        }
+    }
+
     img{
+
         width: 100px;
         height: 100px;
     }

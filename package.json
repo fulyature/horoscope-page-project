@@ -1,6 +1,6 @@
 {
   "homepage": "https://fulyature.github.io/horoscope-page-project",
-  "name": "react-sass-project",
+  "name": "horoscope-page-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
