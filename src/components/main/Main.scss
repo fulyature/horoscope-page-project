@@ -12,7 +12,7 @@
         //card-over hidden yapıldı ki,y ekseninde görünmeyecek şekilde kaydırdık.. üzerine gelince görünecek şekilde ayarlandı
         overflow: hidden;
         &:hover .card-over{
-            transform: translateZ(0);
+            transform: translateY(0%);
 
         }
         &:hover img{
@@ -39,7 +39,7 @@
         background-color:rgba(0,0,0,0.8);
         color:$cardNavBgColor;
         padding: 1rem;
-        font-size: 0.5rem;
+        font-size:1.2rem;
         border-radius: 10px;
         z-index: 2;
     }
@@ -49,6 +49,7 @@
         object-fit: cover;
         border-radius: 10px;
         opacity: 0.5;
+    
     }
     .card-over{
         width: 500px;
@@ -69,6 +70,9 @@
         //scroll kötü göründüğü için none yapıyorum
         &::-webkit-scrollbar{
             display: none;
+        }
+        p{
+            font-weight: 600;
         }
   
     }
